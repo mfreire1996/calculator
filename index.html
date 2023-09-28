@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="shortcut icon" href="favicon-32x32.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <title>Calculator App</title>
+</head>
+<body>
+    <div class="header">
+        <h2>calc</h2>
+        <h5>THEME</h5>
+        <div class="switch">
+            <div class="switch-numbers">       
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </div>
+     
+        <div class="switch-radios">
+            <input type="radio" name="theme-type" value="one" id="first">
+            <input type="radio" name="theme-type" value="two" id="second">
+            <input type="radio" name="theme-type" value="three" id="third">
+        </div>
+        <div class="ball"></div>
+    </div>
+    </div>
+
+    <!-- <div class="screen"></div> -->
+
+    <div class="calculator">
+        <form>
+            <div class="screen">
+                <input type="text" name="display">
+            </div>
+        <div class="row one">
+            <input type="button" value="7" class="number" onclick="display.value += '7'"></input>
+            <input type="button" value="8" class="number" onclick="display.value += '8'"></input>
+            <input type="button" value="9" class="number" onclick="display.value += '9'"></input>
+            <input type="button" value="DEL" class="delete specialBtn" onclick="display.value = display.value.toString().slice(0,-1)"></input>
+        </div>
+        <div class="row two">
+            <input type="button" value="4" class="number" onclick="display.value += '4'"></input>
+            <input type="button" value="5" class="number" onclick="display.value += '5'"></input>
+            <input type="button" value="6" class="number" onclick="display.value += '6'"></input>
+            <input type="button" value="+" class="number" onclick="display.value += '+'"></input>
+        </div>
+        <div class="row three">
+            <input type="button" value="1" class="number" onclick="display.value += '1'"></input>
+            <input type="button" value="2" class="number" onclick="display.value += '2'"></input>
+            <input type="button" value="3" class="number" onclick="display.value += '3'"></input>
+            <input type="button" value="-" class="number" onclick="display.value += '-'"></input>
+        </div>
+        <div class="row four">
+            <input type="button" value="." class="number" onclick="display.value += '.'"></input>
+            <input type="button" value="0" class="number" onclick="display.value += '0'"></input>
+            <input type="button" value="/" class="number" onclick="display.value += '/'"></input>
+            <input type="button" value="x" class="number" onclick="display.value += '*'"></input>
+        </div>
+        <div class="five">
+            <input type="button" value="RESET" class="specialBtn bottomBtn" id="reset" onclick="display.value = '' "></input>
+            <input type="button" value="=" class="bottomBtn" id="equal" onclick="display.value = eval(display.value)"></input>
+        </div>
+    </div>
+    </form>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
